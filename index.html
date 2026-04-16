@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Training - Level Up Your Skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .reason-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .reason-card:nth-child(1) { animation-delay: 0.1s; }
+        .reason-card:nth-child(2) { animation-delay: 0.2s; }
+        .reason-card:nth-child(3) { animation-delay: 0.3s; }
+        .reason-card:nth-child(4) { animation-delay: 0.4s; }
+        .reason-card:nth-child(5) { animation-delay: 0.5s; }
+        .reason-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .reason-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+        }
+
+        .icon-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .icon-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .icon-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .icon-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .icon-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .icon-6 { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+
+        .reason-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .reason-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+            font-size: 1.1em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            .reasons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Git & GitHub Training</h1>
+            <p>Master Version Control and Collaborative Development</p>
+        </div>
+
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <div class="icon icon-1">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h3>Version Control Mastery</h3>
+                <p>Learn to track changes, manage branches, and maintain code history effectively. Master the foundation of modern software development.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="icon icon-2">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Team Collaboration</h3>
+                <p>Discover how to work seamlessly with team members, resolve merge conflicts, and coordinate on projects of any scale.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="icon icon-3">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Security & Backup</h3>
+                <p>Ensure your code is safe with distributed repositories, secure branches, and comprehensive backup strategies for peace of mind.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="icon icon-4">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Industry Standard Tool</h3>
+                <p>GitHub is used by millions of developers worldwide. Learning it makes you more employable and connects you to the global developer community.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="icon icon-5">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Career Growth</h3>
+                <p>Git & GitHub skills are essential for any developer role. Boost your resume and unlock opportunities in top tech companies.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="icon icon-6">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Open Source Contribution</h3>
+                <p>Participate in global open-source projects, build your portfolio, and make a real impact on projects used by millions.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>✨ Ready to transform your development skills?</p>
+            <a href="#" class="cta-button">Start Your Training Today</a>
+        </div>
+    </div>
+</body>
+</html>
